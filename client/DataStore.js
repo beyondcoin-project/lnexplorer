@@ -16,8 +16,8 @@ class DataStore {
     // Currently selected object on map (node or channel)
     @observable selectedObject = {};
 
-    // Bitcoin price in usd
-    @observable usdbtc;
+    // Beyondcoin price in usd
+    @observable usdbynd;
 
     selectObject(object, source) {
         this.selectedObject = {object, source};
@@ -70,8 +70,8 @@ class DataStore {
     }
 
     fetchPrice() {
-        Axios.get('https://blockchain.info/ticker').then((result) => {
-            this.usdbtc = result.data.USD.last;
+        Axios.get('https://coingecko.com/ticker').then((result) => {
+            this.usdbynd = result.data.USD.last;
         });
     }
 }

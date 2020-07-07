@@ -14,7 +14,7 @@ const main = require('./server/main');
 const sections = [
     {
         header: 'Lightning Network Explorer',
-        content: 'Makes Bitcoin Great Again!'
+        content: 'Powered by Beyondcoin!'
     },
     {
         header: 'Options',

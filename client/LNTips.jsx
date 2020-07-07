@@ -101,7 +101,7 @@ export default class LNTips extends React.Component {
             case PaymentState.PAYMENT_STATE_WAITING_FOR_INPUT:
                 return (
                     <span style={styles.container}>
-                        <input type="text" placeholder="Amount (satoshi)" style={styles.input} onChange={event => this.onValueChange(event)}/>
+                        <input type="text" placeholder="Amount (beyondtoshi)" style={styles.input} onChange={event => this.onValueChange(event)}/>
                         <button style={styles.button} onClick={event => this.onCreateInvoice(event)}>Get Invoice</button>
                     </span>
                 );
@@ -112,7 +112,7 @@ export default class LNTips extends React.Component {
             case PaymentState.PAYMENT_STATE_WAITING_FOR_PAYMENT:
                 return (
                     <span style={styles.container}>
-                        PayReq: 
+                        PayReq:
                         <input type="text" value={this.state.invoice} readOnly={true} style={styles.input} />
                         <CopyToClipboard text={this.state.invoice} onCopy={() => this.setState({copied: true})}>
                             { this.state.copied ? (
@@ -126,7 +126,7 @@ export default class LNTips extends React.Component {
             case PaymentState.PAYMENT_STATE_COMPLETED:
                 return (
                     <span style={styles.container}>
-                        Got it! Thanks! 
+                        Got it! Thanks!
                         <a href="javascript:void(0)" onClick={event => this.setState({paymentState: PaymentState.PAYMENT_STATE_WAITING_FOR_INPUT})}>Repeat?</a>
                     </span>
                 );

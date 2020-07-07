@@ -25,7 +25,7 @@ export default class NodeInfo extends React.Component {
                 </tr>
                 <tr>
                     <td>Last Update</td>
-                    <td>{moment(node.last_update*1000).format('MMMM Do YYYY, h:mm:ss a')}</td>
+                    <td>{moment(node.last_update).format('MMMM Do YYYY, h:mm:ss a')}</td>
                 </tr>
                 <tr>
                     <td>Color</td>

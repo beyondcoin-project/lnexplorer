@@ -1,10 +1,10 @@
 
-function FormatCapacity(cap, usdbtc)
+function FormatCapacity(cap, usdbynd)
 {
     var formattedCap = cap.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-    if (usdbtc)
+    if (usdbynd)
     {
-        var capusd = cap*usdbtc/Math.pow(10,8);
+        var capusd = cap*usdbynd/Math.pow(10,8);
         var formattedCapusd = capusd.toLocaleString(undefined, {style: 'currency', currency: 'USD'});
         return `${formattedCap} sat (${formattedCapusd} USD)`;
     }
@@ -32,7 +32,7 @@ function ParseAxiosError(error)
 
 function GetTransactionURL(txid)
 {
-    return 'https://www.smartbit.com.au/tx/' + txid;
+    return 'https://beyondcoinexplorer.com/#/transaction/' + txid;
 }
 
 export {
